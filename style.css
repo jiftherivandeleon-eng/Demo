@@ -1,0 +1,160 @@
+/* ---------- Tokens ---------- */
+:root {
+  --color-bg: #eeeeee;
+  --color-surface: #ffffff;
+  --color-text: #1B222B;
+  --color-text-muted: #55606B;
+  --color-border: #DCE3EC;
+  --color-accent: #175FA8;
+  --color-accent-dark: #0F4478;
+  --radius: 8px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.25rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--color-accent-dark);
+}
+
+/* ---------- Top nav bar (used on dashboard.html) ---------- */
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ---------- Primary-action link (index.html, login.html) ----------
+   These pages have a single <a> inside <nav>, no <ul> — that structural
+   difference is what this selector keys off, so no extra classes are
+   needed in the HTML to tell the two nav styles apart. */
+main nav a {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main nav a:hover,
+main nav a:focus-visible {
+  background-color: var(--color-accent-dark);
+}
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 640px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+/* ---------- Forms ---------- */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  margin-top: 0.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input[type="text"]:focus-visible,
+input[type="password"]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+  border-color: var(--color-accent);
+}
+
+button {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background-color: var(--color-accent-dark);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
